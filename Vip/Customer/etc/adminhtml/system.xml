@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+  <system>
+    <tab id="vendor" translate="label" class="vendor" sortOrder="100">
+ <label>Reward Module</label>
+     </tab>
+        <section id="extension" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1"
+        showInStore="1">
+        <class>separator-top</class>
+             <label>General</label>
+            <tab>vendor</tab>
+             <resource>Vip_Customer::config_extension</resource>
+            <group id="general" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1"
+                showInStore="1">
+            <label>Module Configuration</label>
+           
+              <field id="vip_cust" translate="label comment" type="text" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Messgage For Vip Customers</label>
+                    <validate>validate-vip</validate>
+                    <comment>Fill Massage For Vip Customers</comment>
+                </field>
+
+                 <field id="gen_cust" translate="label comment" type="text" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Messgage For General Customers</label>
+                    <validate>validate-gen</validate>
+                    <comment>Fill Massage For General Customers</comment>
+                </field>
+
+                 <field id="whol_cust" translate="label comment" type="text" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Messgage For Wholseller Customers</label>
+                    <validate>validate-vip</validate>
+                    <comment>Fill Massage For Wholseller Customers</comment>
+                </field>
+
+                 <field id="rete_cust" translate="label comment" type="text" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Messgage For Retailer Customers</label>
+                    <validate>validate-vip</validate>
+                    <comment>Fill Massage For Retailer Customers</comment>
+                </field>
+
+                    <field id="enabled" translate="label comment" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enabled</label>
+                    <comment>Enables or disables extension.</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+
+
+             </group>
+         </section>
+    </system>
+</config>
